@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: roboto, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    background-image: url('gradient.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+button {
+    border: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+input:focus, select:focus {
+    outline: none;
+}
+
+header {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.todo-container {
+    width: 30%;
+    margin: 30px auto;
+}
+
+.todo-container li {
+    list-style: none;
+}
+
+.todo-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    transition: 0.3s all ease;
+}
+
+.todo-list li {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.btn-trash, .check-btn {
+    padding: 1rem;
+    color: #ffffff;
+}
+
+.btn-trash {
+    background: #f84332;
+}
+
+.check-btn {
+    background: #1b611b;
+}
+
+input, select {
+    border: 0;
+    padding: 0.5rem;
+}
+
+.select {
+    position: relative;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.select::after {
+    content: "\25bc";
+    position: absolute;
+    background-color: #feb354;
+    color: #ffffff;
+    top: 0;
+    right: 0;
+    padding: 0.6rem;
+    pointer-events: none;
+    font-size: 10px;
+    transition: 0.3s all ease;
+}
+
+.select:hover::after {
+    background-color: #fff;
+    color: #feb354;
+}
+
+.add-todos {
+    padding: 0.5rem;
+    color: #ffffff;
+    background: #feb354;
+    transition: 0.5s ease all;
+    cursor: pointer;
+}
+
+.add-todos:hover {
+    background: #ffffff;
+    color: #feb354;
+}
+
+button i {
+    pointer-events: none;
+}
+
+.deleted {
+    transform-origin: left;
+    transform: rotate(20deg) translateY(8rem);
+    opacity: 0;
+    transition: 0.3s all ease;
+}
+
+.completed {
+    opacity: 0.5;
+}
+
+.completed li {
+    text-decoration: line-through;
+}
